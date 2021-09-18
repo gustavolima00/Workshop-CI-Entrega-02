@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  database:
+    image: postgres
+    ports:
+      - '8000:5432'
+    environment:
+      POSTGRES_PASSWORD: Password1
+    networks: 
+      - network_app
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      TYPEORM_CONNECTION: postgres
+      TYPEORM_URL: postgres://postgres:Password1@database:5432/postgres
+      TYPEORM_ENTITIES: src/entities/*.js
+      SECRET: foobar
+    depends_on:
+      - database
+    networks:
+      - network_app
+
+networks:
+  network_app:
