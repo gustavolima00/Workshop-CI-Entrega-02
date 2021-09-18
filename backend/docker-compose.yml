@@ -25,6 +25,7 @@ services:
       - database
     networks:
       - network_app
-
+    image: gustavolim00/trabalho-individual2-backend
+    
 networks:
   network_app:
