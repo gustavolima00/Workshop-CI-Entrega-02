@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  frontend:
+  frontend_2:
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,6 +9,7 @@ services:
       - '3030:3000'
     networks:
       - network_app
+    image: gustavolim00/trabalho-individual2-frontend
 
 networks:
   network_app:

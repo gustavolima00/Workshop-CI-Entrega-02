@@ -42,4 +42,10 @@ O repositório integrando o serviço com o gitlab é esse [https://gitlab.com/gu
 
 ## Deploy 
 
-TODO 
+The deployment was made in dockerhub on these two URLs 
+
+https://hub.docker.com/repository/docker/gustavolim00/trabalho-individual2-backend
+
+https://hub.docker.com/repository/docker/gustavolim00/trabalho-individual2-frontend
+
+The deploy was made on CI/CD on gitlab using my docker credentials DOCKER_USER and DOCKER_PASS configured on GitLab CI/CD
